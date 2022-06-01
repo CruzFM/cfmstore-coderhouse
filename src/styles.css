@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--title{
+    margin-right: auto;
+    padding: 24px 32px;
+}
+
+.header--navbar_items{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.header--navbar_items > li{
+    padding: 20px;
+}
+
+.heroSection{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,9 +1,17 @@
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import "./styles.css"
+
+
 function App() {
   return (
-    <div>
-      <h1>Hola Coderhouse!</h1>
-      <h2>Muchas gracias por el contenido!</h2>
-    </div>
+    <>
+      <Header />
+
+      <Hero />
+      
+    </>
+
   );
 }
 

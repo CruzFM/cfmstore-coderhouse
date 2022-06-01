@@ -1,5 +1,17 @@
 export default function Header(){
     return(
-        <h2>Seguimos aprendiendo</h2>
+        <header className="header">
+
+            <h3 className="header--title">CFM Store</h3>
+
+            <nav className="header--navbar">
+                <ul className="header--navbar_items">
+                    <li>Home</li>
+                    <li>Productos</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+        </header>
     )
 }

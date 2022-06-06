@@ -1,3 +1,5 @@
+import CartWidget from "./CartWidget"
+
 export default function Header(){
     return(
         <header className="header">
@@ -9,7 +11,11 @@ export default function Header(){
                     <li>Home</li>
                     <li>Productos</li>
                     <li>Contact</li>
+                    <li>
+                    <CartWidget />
+                    </li>
                 </ul>
+                
             </nav>
 
         </header>

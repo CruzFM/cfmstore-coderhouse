@@ -47,3 +47,28 @@ h1,h2,h3,h4,h5,h6 {
 .cartWidget{
     width: 60px;
 }
+
+.itemListContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 18rem;
+    border: 1px solid blue;
+    border-radius: 5%;
+}
+
+.card > img{
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.card--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

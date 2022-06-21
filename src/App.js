@@ -1,7 +1,13 @@
+//Components
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import ItemListContainer from "./components/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailCointainer"
+
+//Hooks
 import { useState } from 'react'
+
+//Styles
 import "./styles.css"
 
 
@@ -38,6 +44,8 @@ function App() {
         counter={counter}
         stock={productStock}
         />
+
+      <ItemDetailContainer />
       
     </>
 

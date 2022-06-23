@@ -3,6 +3,7 @@ import musculosaDeathwalker from "../images/items/musculosaDeathwalker.jpg"
 import remeraBlackRaven from "../images/items/remeraBlackraven.jpg"
 import remeraTriskel from "../images/items/remeraTriskel.jpg"
 import buzoTriskel from "../images/items/buzoTriskel.jpg"
+import {Link} from 'react-router-dom'
 
 const productsArray = [
     {
@@ -79,31 +80,24 @@ export default function ItemListContainer(props){
                                 <h2>{product.nombre}</h2>
                                 <p>{product.desc}</p>
                                 <p>{product.precio}</p>
+                                <p> 
+                                    <Link to={`/category/:id`}>
+                                    {product.tipo}
+                                    </Link>
+                                </p>
                                 <div>
                                     <p>Stock: {props.stock}</p>
                                     <p> You're taking: {props.counter} </p>
                                     <button onClick={props.onAdd}>+</button>
                                     <button onClick={props.onSubstract}>-</button>
+                                    <br />
+                                    <Link to={`/item/:id${product.id}`} className='linkPages'>Details</Link>
                                 </div>
                             </div>
                         </div>
                     )
                 })
             }
-            {/* <div className='card'>
-                <img src="https://picsum.photos/200/300" alt="product"/>
-                <div className="card--text">
-                    <h2>{props.greeting}</h2>
-                    <p>Info about the product</p>
-                    <p>Price</p>
-                    <div>
-                        <p>Stock: {props.stock}</p>
-                        <p> You're taking: {props.counter} </p>
-                        <button onClick={props.onAdd}>+</button>
-                        <button onClick={props.onSubstract}>-</button>
-                    </div>
-                </div>
-            </div> */}
 
         </div>
     )

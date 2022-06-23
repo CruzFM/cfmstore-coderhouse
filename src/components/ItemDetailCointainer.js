@@ -9,8 +9,11 @@ import ItemDetail from "./ItemDetail"
 //Hooks
 import { useState } from 'react'
 import { useEffect } from 'react'
+import {useParams} from 'react-router-dom'
 
 export default function ItemDetailContainer(){
+
+    let {id} = useParams()
 
     const productsArray = [
         {
@@ -70,13 +73,17 @@ export default function ItemDetailContainer(){
             }
         )
         productsPromise.then((resolve) =>{
-            setProduct(resolve[0])
+            setProduct(resolve.find(prod => prod.id === id))
         })
     }, [])
 
     return(
-        <div className="itemDetailContainer">
-            <ItemDetail product={product} />
-        </div>
+        <>
+            {!product && <h1>Loading {id}</h1>}
+            {product && <div className="itemDetailContainer">
+                <ItemDetail product={product} />
+            </div>}
+
+        </>
     )
 }

@@ -1,12 +1,24 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* Styles*/
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .header {
@@ -17,11 +29,16 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
     top: 0;
     position: sticky;
+    box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
+    -webkit-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
+    -moz-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
+    background-color: #fff;
 }
 
 .header--title{
     margin-right: auto;
     padding: 24px 32px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header--navbar_items{
@@ -59,6 +76,8 @@ h1,h2,h3,h4,h5,h6 {
     width: 18rem;
     border: 1px solid blue;
     border-radius: 5%;
+    display: grid;
+    place-items: center;
 }
 
 .card > img{
@@ -68,10 +87,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card--text{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    text-align: center;
+    display: grid;
+    place-items: center;
 }
 
 .itemDetailContainer{
@@ -97,4 +119,14 @@ h1,h2,h3,h4,h5,h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.linkPages{
+    border: purple;
+    border-radius: 5%;
+}
+
+.linkPages:hover{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
 }

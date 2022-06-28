@@ -11,9 +11,11 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import {useParams} from 'react-router-dom'
 
-export default function ItemDetailContainer(){
+export default function ItemDetailContainer(props){
 
     let {id} = useParams()
+
+    id = id.substring(3, id.length +1)
 
     const productsArray = [
         {
@@ -73,15 +75,26 @@ export default function ItemDetailContainer(){
             }
         )
         productsPromise.then((resolve) =>{
-            setProduct(resolve.find(prod => prod.id === id))
+            setProduct(resolve.find(prod => prod.id === parseInt(id) ))
         })
     }, [])
+
+    const onAdd = props.onAdd
+    const onSubstract = props.onSubstract
+    const counter = props.counter
+    const stock = props.stock
 
     return(
         <>
             {!product && <h1>Loading {id}</h1>}
             {product && <div className="itemDetailContainer">
-                <ItemDetail product={product} />
+                <ItemDetail 
+                    product={product} 
+                    onAdd={onAdd} 
+                    onSubstract={onSubstract}
+                    counter={counter}
+                    stock={stock}
+                    />
             </div>}
 
         </>

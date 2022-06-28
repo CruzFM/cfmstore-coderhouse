@@ -4,6 +4,7 @@ import Hero from "./components/Hero"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailCointainer"
 import Category from "./components/Category"
+import Cart from "./components/Cart"
 
 //Modules
 import {Routes, Route} from 'react-router-dom'
@@ -57,12 +58,24 @@ function App() {
         
         <Route 
           path='/item/:id'
-          element={<ItemDetailContainer />}
+          element={
+          <ItemDetailContainer 
+              onAdd={onAdd} 
+              onSubstract={onSubstract}       
+              counter={counter}
+              stock={productStock}
+            />
+          }
         />
         
         <Route 
           path='/category/:id' 
           element={<Category/>} 
+        />
+
+        <Route 
+          path='/cart' 
+          element={<Cart />} 
         />
         
       </Routes>

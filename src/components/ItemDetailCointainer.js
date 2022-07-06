@@ -26,7 +26,6 @@ export default function ItemDetailContainer(props){
             "precio": 2500,
             "talle": "M",
             "img": musculosaDeathwalker,
-            "cantidad": 1,
             "banda": "Eluveitie"
         },
         {
@@ -36,7 +35,6 @@ export default function ItemDetailContainer(props){
             "desc": "Una remera del single Blackraven",
             "precio": 3000,
             "talle": "M",
-            "cantidad": 1,
             "img": remeraBlackRaven,
             "banda": "Eluveitie"
         },
@@ -48,7 +46,6 @@ export default function ItemDetailContainer(props){
             "precio": 3000,
             "talle": "M",
             "img": remeraTriskel,
-            "cantidad": 1,
             "banda": "Eluveitie" 
         },
         {
@@ -59,7 +56,6 @@ export default function ItemDetailContainer(props){
             "precio": 3200,
             "talle": "M",
             "img": buzoTriskel,
-            "cantidad": 1,
             "banda": "Eluveitie" 
         }
     ]
@@ -79,10 +75,6 @@ export default function ItemDetailContainer(props){
         })
     }, [])
 
-    const onAdd = props.onAdd
-    const onSubstract = props.onSubstract
-    const counter = props.counter
-    const stock = props.stock
 
     return(
         <>
@@ -90,10 +82,6 @@ export default function ItemDetailContainer(props){
             {product && <div className="itemDetailContainer">
                 <ItemDetail 
                     product={product} 
-                    onAdd={onAdd} 
-                    onSubstract={onSubstract}
-                    counter={counter}
-                    stock={stock}
                     />
             </div>}
 

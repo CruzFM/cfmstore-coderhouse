@@ -1,4 +1,5 @@
 import React from 'react';
+import { CartProvider } from './context/CartContext';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -6,8 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+
+    <CartProvider>
+
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+      
+    </CartProvider>
+
   </React.StrictMode>
 );

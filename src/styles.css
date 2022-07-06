@@ -130,3 +130,14 @@ a{
     color: rgb(255, 255, 255);
     background-color: blueviolet;
 }
+
+.itemCounter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemCounter--addSub{
+    display: flex;
+}

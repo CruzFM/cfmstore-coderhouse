@@ -18,24 +18,6 @@ import "./styles.css"
 
 function App() {
 
-  const [productStock, setProductStock] = useState(5)
-
-  const [counter, setCounter] = useState(0)
-
-  const onAdd = () => {
-    if (productStock > 0){
-      setCounter(prevCounter => prevCounter + 1)
-      setProductStock(prevProductStock => prevProductStock - 1)
-    }
-  }
-
-  const onSubstract = () =>{
-    if(counter > 0){
-      setCounter(prevCounter => prevCounter - 1)
-      setProductStock(prevProductStock => prevProductStock + 1 )
-    }
-  }
-
   return (
     <>
       <Header />
@@ -49,10 +31,6 @@ function App() {
           element={  
             <ItemListContainer 
             greeting="Bienvenidos a los productos"
-            onAdd={onAdd}
-            onSubstract={onSubstract}
-            counter={counter}
-            stock={productStock}
             />}
         />
         
@@ -60,10 +38,6 @@ function App() {
           path='/item/:id'
           element={
           <ItemDetailContainer 
-              onAdd={onAdd} 
-              onSubstract={onSubstract}       
-              counter={counter}
-              stock={productStock}
             />
           }
         />

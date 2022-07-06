@@ -14,7 +14,6 @@ const productsArray = [
         "precio": 2500,
         "talle": "M",
         "img": musculosaDeathwalker,
-        "cantidad": 1,
         "banda": "Eluveitie"
     },
     {
@@ -24,7 +23,6 @@ const productsArray = [
         "desc": "Una remera del single Blackraven",
         "precio": 3000,
         "talle": "M",
-        "cantidad": 1,
         "img": remeraBlackRaven,
         "banda": "Eluveitie"
     },
@@ -36,7 +34,6 @@ const productsArray = [
         "precio": 3000,
         "talle": "M",
         "img": remeraTriskel,
-        "cantidad": 1,
         "banda": "Eluveitie" 
     },
     {
@@ -47,7 +44,6 @@ const productsArray = [
         "precio": 3200,
         "talle": "M",
         "img": buzoTriskel,
-        "cantidad": 1,
         "banda": "Eluveitie" 
     }
 ]
@@ -86,11 +82,6 @@ export default function ItemListContainer(props){
                                     </Link>
                                 </p>
                                 <div>
-                                    <p>Stock: {props.stock}</p>
-                                    <p> You're taking: {props.counter} </p>
-                                    <button onClick={props.onAdd}>+</button>
-                                    <button onClick={props.onSubstract}>-</button>
-                                    <br />
                                     <Link to={`/item/:id${product.id}`} className='linkPages'>Details</Link>
                                 </div>
                             </div>

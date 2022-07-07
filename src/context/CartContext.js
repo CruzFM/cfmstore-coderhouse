@@ -15,10 +15,17 @@ export const CartProvider = ( {children} ) => {
         console.log(cart)
     },[cart])
 
-    const toCart = (item, cuantitiy) =>{
-        setCart([...cart, {...item, cantidad: cuantitiy}])
+    const toCart = (item, cuantity) =>{
+        setCart([...cart, {...item, cantidad: cuantity}])
         console.log(cart)
         // console.log(item, cuantitiy)
+    }
+
+    function cantidadEnCart(){
+        let cantidadTotal = 0
+        cart.forEach( (item) => (cantidadTotal + item.cantidad) )
+        console.log(cantidadTotal)
+        return cantidadTotal
     }
 
 
@@ -27,10 +34,10 @@ export const CartProvider = ( {children} ) => {
     //     setCart([...cart, {...item, cuantity}])
     // }
 
-    console.log(children)
+    // console.log(children)
 
     return (
-        <CartContext.Provider value={ {cart, toCart} }>
+        <CartContext.Provider value={ {cart, toCart, cantidadEnCart} }>
             {children}
         </CartContext.Provider>)
 

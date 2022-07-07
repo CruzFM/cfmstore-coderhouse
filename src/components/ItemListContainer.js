@@ -4,6 +4,7 @@ import remeraBlackRaven from "../images/items/remeraBlackraven.jpg"
 import remeraTriskel from "../images/items/remeraTriskel.jpg"
 import buzoTriskel from "../images/items/buzoTriskel.jpg"
 import {Link} from 'react-router-dom'
+import { traeProductos } from "../services/firestore"
 
 const productsArray = [
     {
@@ -63,6 +64,14 @@ export default function ItemListContainer(props){
         productsPromise.then((resolve) =>{
             setProduct(resolve)
         })
+
+        // traeProductos()
+        //     .then( (res) => {
+        //         setProduct(res);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
     }, [])
     
     return(
@@ -74,7 +83,7 @@ export default function ItemListContainer(props){
                             <img src={product.img} alt="product"/>
                             <div className="card--text">
                                 <h2>{product.nombre}</h2>
-                                <p>{product.desc}</p>
+                                <p>{product.descripción}</p>
                                 <p>{product.precio}</p>
                                 <p> 
                                     <Link to={`/category/:id`}>

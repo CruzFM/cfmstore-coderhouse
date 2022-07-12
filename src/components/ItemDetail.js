@@ -9,6 +9,7 @@ export default function ItemDetail(props){
 
     const {toCart} = useContext(CartContext)
     const [cantidad, setCantidad] = useState(0)
+    // const producto = props.product
 
     // useEffect(()=>{
     //     console.log(cantidad)
@@ -18,7 +19,7 @@ export default function ItemDetail(props){
     const onAddToCart = (cuantitiy) =>{
         setCantidad(cuantitiy)
         toCart(props.product, cuantitiy)
-        // console.log(props.product)
+        console.log(props.product)
     } 
 
     return(

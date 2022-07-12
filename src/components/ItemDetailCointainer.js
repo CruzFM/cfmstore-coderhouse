@@ -79,7 +79,7 @@ export default function ItemDetailContainer(props){
 
     traeProductos()
     .then( (res) => {
-        setProduct(res);
+        setProduct(res.find(prod => prod.id === id ));
     })
     .catch((error) => {
         console.log(error)

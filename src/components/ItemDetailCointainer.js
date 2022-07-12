@@ -5,6 +5,8 @@ import buzoTriskel from "../images/items/buzoTriskel.jpg"
 
 //components
 import ItemDetail from "./ItemDetail"
+import { traeProductos } from "../services/firestore"
+
 
 //Hooks
 import { useState } from 'react'
@@ -63,17 +65,26 @@ export default function ItemDetailContainer(props){
     const [product, setProduct] = useState({})
 
     useEffect( ()=>{
-        const productsPromise = new Promise(
-            (resolve) =>{
-                setTimeout(() => {
-                    resolve(productsArray)
-                }, 2000);
-            }
-        )
-        productsPromise.then((resolve) =>{
-            setProduct(resolve.find(prod => prod.id === parseInt(id) ))
-        })
-    }, [])
+    //     const productsPromise = new Promise(
+    //         (resolve) =>{
+    //             setTimeout(() => {
+    //                 resolve(productsArray)
+    //             }, 2000);
+    //         }
+    //     )
+    //     productsPromise.then((resolve) =>{
+    //         setProduct(resolve.find(prod => prod.id === parseInt(id) ))
+    //     })
+    // }, [])
+
+    traeProductos()
+    .then( (res) => {
+        setProduct(res);
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+}, [])
 
 
     return(

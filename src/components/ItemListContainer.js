@@ -54,24 +54,25 @@ export default function ItemListContainer(props){
     const [product, setProduct] = useState([])
 
     useEffect( ()=>{
-        const productsPromise = new Promise(
-            (resolve) =>{
-                setTimeout(() => {
-                    resolve(productsArray)
-                }, 2000);
-            }
-        )
-        productsPromise.then((resolve) =>{
-            setProduct(resolve)
-        })
 
-        // traeProductos()
-        //     .then( (res) => {
-        //         setProduct(res);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     })
+        // const productsPromise = new Promise(
+        //     (resolve) =>{
+        //         setTimeout(() => {
+        //             resolve(productsArray)
+        //         }, 2000);
+        //     }
+        // )
+        // productsPromise.then((resolve) =>{
+        //     setProduct(resolve)
+        // })
+
+        traeProductos()
+            .then( (res) => {
+                setProduct(res);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }, [])
     
     return(

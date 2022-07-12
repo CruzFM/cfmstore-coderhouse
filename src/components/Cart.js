@@ -15,7 +15,7 @@ export default function Cart(){
                         <img src={item.img} alt="product"/>
                         <div className="card--text">
                             <h2>{item.nombre}</h2>
-                            <p>{item.desc}</p>
+                            <p>{item.descripción}</p>
                             <p>${item.precio}</p>
                             <p>Cantidad: {item.cantidad}</p>
                             {/* <p> 

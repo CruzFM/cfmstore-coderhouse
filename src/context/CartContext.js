@@ -29,13 +29,6 @@ export const CartProvider = ( {children} ) => {
     }
 
 
-
-    // const addToCart = (item, cuantity) => {
-    //     setCart([...cart, {...item, cuantity}])
-    // }
-
-    // console.log(children)
-
     return (
         <CartContext.Provider value={ {cart, toCart, cantidadEnCart} }>
             {children}

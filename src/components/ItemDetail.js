@@ -24,11 +24,11 @@ export default function ItemDetail(props){
 
     return(
         <div className="itemDetail">
-            <img src={props.product.img} alt="ImagenProducto" />
+            <img src={props.product.image} alt="ImagenProducto" />
             <div>
-                <h2>Artículo: {props.product.nombre}</h2>
-                <h3>Tipo: {props.product.tipo}</h3>
-                <h3>Precio: ${props.product.precio}</h3>
+                <h2>Item: {props.product.title}</h2>
+                <h3>Category: {props.product.category}</h3>
+                <h3>Price: ${props.product.price}</h3>
                 {/* <button onClick={addToCart(props.product, props.counter)}>Add to cart</button> */}
                 <ItemCounter 
                     stock={5}

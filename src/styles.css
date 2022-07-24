@@ -28,11 +28,12 @@ a{
     align-items: center;
     justify-content: center;
     top: 0;
-    position: sticky;
+    /* position: sticky; */
     box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
     -webkit-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
     -moz-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
     background-color: #fff;
+    margin-bottom: 5%;
 }
 
 .header--title{
@@ -65,36 +66,37 @@ a{
     width: 60px;
 }
 
-.itemListContainer{
+/* .itemListContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
+} */
 
 .card{
     width: 18rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue;
     border-radius: 5%;
     display: grid;
-    place-items: center;
-}
+    place-items: center; */
+    margin: 0.06%;
+} 
 
-.card > img{
+/* .card > img{
     width: 100%;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-}
+} */
 
-.card--text{
-    /* display: flex;
+/* .card--text{
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     text-align: center;
     display: grid;
     place-items: center;
-}
+} */
 
 .itemDetailContainer{
     height: 100vh;
@@ -103,22 +105,38 @@ a{
     justify-content: center; */
 }
 
-.itemDetail {
+/* .itemDetail {
     display: flex;
     flex-direction: row;
     border: 1px solid black;
     border-radius: 5%;
 }
-.itemDetail > img{
-    width: 300px;
-    flex: 1;
-}
+
 .itemDetail > div{
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+} */
+
+.itemDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.itemCounter--toCart{
+    align-items: center;
+    margin-top: 5px;
+}
+.itemCounter--toCart>button{
+    width:100%;
+}
+
+.itemDetail-img{
+    width: 300px;
+    /* flex: 1; */
 }
 
 .linkPages{
@@ -131,13 +149,40 @@ a{
     background-color: blueviolet;
 }
 
-.itemCounter{
+/* .itemCounter{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .itemCounter--addSub{
     display: flex;
+}
+
+.itemCounter--addSub > button{
+    width: 5rem;
+}
+
+.itemCounter--addSub > h6{
+    align-self: center;
+    padding-left: 9px;
+    padding-right: 9px; 
+}
+
+.navbar_items_categoriesItems{
+    display: none;
+}
+
+.navbar_items_categoriesItems-Show{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    /* left: -2%; */
+}
+
+.test{
+    border: 1px solid black;
 }

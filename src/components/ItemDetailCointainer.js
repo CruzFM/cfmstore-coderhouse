@@ -33,11 +33,12 @@ export default function ItemDetailContainer(props){
     return(
         <>
             {!product && <h1>Loading {id}</h1>}
-            {product && <div className="itemDetailContainer">
-                <ItemDetail 
-                    product={product} 
-                    />
-            </div>}
+            {product && 
+                <div className="itemDetailContainer">
+                    <ItemDetail 
+                        product={product} 
+                        />
+                </div>}
         {/* <h1>hola Fer</h1> */}
         </>
     )

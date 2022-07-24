@@ -1,7 +1,13 @@
 import CartWidget from "./CartWidget"
+import { useState } from "react";
 import {Link} from 'react-router-dom'
 
 export default function Header(){
+
+    const [isShown, setIsShown] = useState(false);
+
+
+    
     return(
         <header className="header">
 
@@ -14,22 +20,27 @@ export default function Header(){
             <nav className="header--navbar">
                 <ul className="header--navbar_items">
                     <li>
-                        <Link to="/">
-                            Home
+                        <Link to="/category/men">
+                            Men
                         </Link>
                     </li>
                     <li>
-                        <Link to="/">
-                            Productos
+                        <Link to="/category/women">
+                            Women
                         </Link>
                     </li>
                     <li>
-                        <Link to="/">
-                            Contact
+                        <Link to="/category/jewelry">
+                            Jewelry
                         </Link>
                     </li>
                     <li>
-                    <CartWidget />
+                        <Link to="/category/electronics">
+                            Electronics
+                        </Link>
+                    </li>
+                    <li>
+                        <CartWidget />
                     </li>
                 </ul>
                 

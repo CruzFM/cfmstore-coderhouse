@@ -1,23 +1,19 @@
 //Components
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import ItemListContainer from "./components/ItemListContainer"
-import ItemDetailContainer from "./components/ItemDetailCointainer"
-import Category from "./components/Category"
-import Cart from "./components/Cart"
-import Electronics from "./components/categories/Electronics"
-import Jewelry from "./components/categories/Jewelry"
-import Men from "./components/categories/Men"
-import Women from "./components/categories/Women"
+import Header from "./components/Header";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailCointainer";
+import Cart from "./components/Cart";
+import Electronics from "./components/categories/Electronics";
+import Jewelry from "./components/categories/Jewelry";
+import Men from "./components/categories/Men";
+import Women from "./components/categories/Women";
 
 //Modules
-import {Routes, Route} from 'react-router-dom'
-
-//Hooks
+import {Routes, Route} from 'react-router-dom';
 
 //Styles
-import "./styles.css"
-import "./bootstrap/bootstrap.min.css"
+import "./styles.css";
+import "./bootstrap/bootstrap.min.css";
 
 function App() {
 
@@ -38,11 +34,6 @@ function App() {
             element={
             <ItemDetailContainer />
             }
-          />
-          
-          <Route 
-            path='/categories' 
-            element={<Category/>} 
           />
 
           <Route 

@@ -28,7 +28,6 @@ a{
     align-items: center;
     justify-content: center;
     top: 0;
-    /* position: sticky; */
     box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
     -webkit-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
     -moz-box-shadow: 2px 7px 31px -1px rgba(148,141,141,0.75);
@@ -55,6 +54,15 @@ a{
     padding: 20px;
 }
 
+.header--navbar_items > li:hover{
+    background-color: rgb(182, 182, 243);
+}
+
+.header--navbar_items > li > a{
+    text-decoration: none;
+    color: black;
+}
+
 .heroSection{
     height: 85vh;
     display: flex;
@@ -66,59 +74,14 @@ a{
     width: 60px;
 }
 
-/* .itemListContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
-
 .card{
     width: 18rem;
-    /* border: 1px solid blue;
-    border-radius: 5%;
-    display: grid;
-    place-items: center; */
-    margin: 0.06%;
+    /* margin: 0.06%; */
 } 
-
-/* .card > img{
-    width: 100%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-} */
-
-/* .card--text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: grid;
-    place-items: center;
-} */
 
 .itemDetailContainer{
     height: 100vh;
-
-    /* align-items: center;
-    justify-content: center; */
 }
-
-/* .itemDetail {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-    border-radius: 5%;
-}
-
-.itemDetail > div{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
 
 .itemDetails{
     display: flex;
@@ -136,7 +99,6 @@ a{
 
 .itemDetail-img{
     width: 300px;
-    /* flex: 1; */
 }
 
 .linkPages{
@@ -148,13 +110,6 @@ a{
     color: rgb(255, 255, 255);
     background-color: blueviolet;
 }
-
-/* .itemCounter{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
 
 .itemCounter--addSub{
     display: flex;
@@ -180,9 +135,8 @@ a{
     flex-direction: column;
     position: absolute;
     top: 10%;
-    /* left: -2%; */
 }
 
-.test{
-    border: 1px solid black;
+.finishPurchase{
+    margin-top: 2%;
 }

@@ -1,8 +1,5 @@
-
 //components
-import ItemDetail from "./ItemDetail"
-import { traeProductos } from "../services/firestore"
-
+import ItemDetail from "./ItemDetail";
 
 //Hooks
 import { useState } from 'react'
@@ -14,11 +11,11 @@ import axios from 'axios';
 
 export default function ItemDetailContainer(props){
 
-    let {id} = useParams()
+    let {id} = useParams();
 
-    id = id.substring(3, id.length +1)
+    id = id.substring(3, id.length +1);
 
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState({});
 
     useEffect( ()=>{
     const endPoint = `https://fakestoreapi.com/products/${parseInt(id)}`
@@ -26,20 +23,20 @@ export default function ItemDetailContainer(props){
         .then(res => {
             const apiData = res.data
             setProduct(apiData)
-        })
-}, [])
+        });
+}, []);
 
 
     return(
         <>
-            {!product && <h1>Loading {id}</h1>}
+            {!product && <h1>Loading {id}...</h1>}
             {product && 
                 <div className="itemDetailContainer">
                     <ItemDetail 
                         product={product} 
-                        />
-                </div>}
-        {/* <h1>hola Fer</h1> */}
+                    />
+                </div>
+            }
         </>
-    )
-}
+    );
+};

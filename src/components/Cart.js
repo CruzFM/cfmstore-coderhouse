@@ -33,6 +33,12 @@ export default function Cart(){
             <h2>Total price: $ {totalPrice()}</h2>
           </div>
 
+          {cart.length < 1 && 
+            <div className="loaderContainer d-flex justify-content-center align-items-center"> 
+              <h2>You have no products added to the cart.</h2>
+            </div>    
+          }
+
           <div className="itemListContainer container">
             <div className="row">
               {cart.map((item, idx) => {

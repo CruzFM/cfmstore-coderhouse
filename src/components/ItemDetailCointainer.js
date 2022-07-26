@@ -29,7 +29,12 @@ export default function ItemDetailContainer(props){
 
     return(
         <>
-            {!product && <h1>Loading {id}...</h1>}
+            {Object.keys(product).length < 1 && 
+                <div className="loaderContainer d-flex justify-content-center align-items-center"> 
+                    <span className="loader"></span> 
+                </div>
+            }
+
             {product && 
                 <div className="itemDetailContainer">
                     <ItemDetail 

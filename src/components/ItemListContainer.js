@@ -35,7 +35,13 @@ export default function ItemListContainer(props){
     return (
       <div className="itemListContainer container ">
         <div className="row">
-          {product.map((product, idx) => {
+          {product.length < 1 && 
+            <div className="loaderContainer d-flex justify-content-center align-items-center"> 
+              <span className="loader"></span> 
+            </div>    
+          }
+          
+          {product && product.map((product, idx) => {
             return (
               <div
                 className="card col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 "

@@ -17,6 +17,14 @@ export default function Jewelry(){
     },[] );
 
     return(
-        <ProductSortedCard products={products} />
+        <>
+            {products.length < 1 && 
+                <div className="loaderContainer d-flex justify-content-center align-items-center"> 
+                    <span className="loader"></span> 
+                </div>    
+            }
+        
+            {products && <ProductSortedCard products={products} />}
+        </>
     );
 }
